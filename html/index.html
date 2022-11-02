@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="ru">
+@include('components/_head.html', {
+  "pageTitle": "Главная страница"
+})
+@include('components/_header.html')
 
-@include('components/_head.html')
+<main class="main">
 
-<body>
+  @include('components/_hero.html')
+  @include('components/_categories.html')
+  @include('components/_about.html')
+  @include('components/_restorants.html')
+  @include('components/_reviews.html')
+  @include('components/_application.html')
 
-  @include('components/_header.html')
-  
-  <mail>
-    
-    @include('components/_hero.html')
-    @include('components/_categories.html')
-    
-  </mail>
+</main>
 
-  @include('components/_footer.html')
-  
-  <script src="js/main.min.js"></script>
-</body>
+@include('components/_footer.html')
+@include('components/_footer-scripts.html')
 
 </html>
