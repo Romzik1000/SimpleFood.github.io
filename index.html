@@ -10,49 +10,51 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
   <div class="container">
-    <div class="header__inner">
-      <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Лого">
-      </a>
       <nav class="menu">
-        <button class="menu__btn">
-          <span></span>
-        </button>
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Главная
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Блюда
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-
-        <div class="user-nav">
-          <a class="user-nav__link" href="#">
-            <span class="user-nav__svg" style="background-image: url('images/icons/icon-search.svg');"></span>
+        <div class="container menu__items">
+          <a class="logo" href="#header">
+            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="Лого">
           </a>
-          <a class="user-nav__link" href="#">
-            <span class="user-nav__num">
-              4
-            </span>
-            <span class="user-nav__svg" style="background-image: url('images/icons/icon-cart.svg');">
-            </span>
-          </a>
+          <button class="menu__btn">
+            <span></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
+          <div class="menu__aside">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Главная
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Блюда
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="user-nav">
+              <a class="user-nav__link" href="#">
+                <span class="user-nav__svg" style="background-image: url('images/icons/icon-search.svg');"></span>
+              </a>
+              <a class="user-nav__link" href="#">
+                <span class="user-nav__num">
+                  4
+                </span>
+                <span class="user-nav__svg" style="background-image: url('images/icons/icon-cart.svg');">
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
     </div>
-  </div>
 </header>
 
 <main class="main">
@@ -86,7 +88,10 @@
     <h2 class="categories__title title">
       Популярные категории
     </h2>
-    <ul class="filters">
+    <div class="filters">
+      <ul class="filters__items">
+
+      
       <li class="filters__item">
         <button class="filters__item-btn btn filters__item-btn--active" type="button" data-filter=".category-burgers">
           <span style="background-image: url('images/sprite.svg#icon-category-burger');"></span>
@@ -117,7 +122,8 @@
           Cеты
         </button>
       </li>
-    </ul>
+      </ul>
+    </div>
     <div class="categories__content">
 
       <article class="categories__item mix category-burgers">
@@ -318,7 +324,7 @@
     <div class="restorants__inner">
 
       <article class="restorants__item">
-        <img  class="restorants__img" src="images/food/blaze-pizza.png" alt="blaze-pizza" width="370" height="300">
+        <img class="restorants__img" src="images/food/blaze-pizza.png" alt="blaze-pizza" width="370" height="300">
         <h3 class="restorants__name">
           Blaze Pizza
         </h3>
@@ -331,11 +337,10 @@
           </div>
           <a href="#" class="restorants__link">
             <span style="background-image: url('images/sprite.svg#icon-arrow');"></span>
-            
           </a>
         </div>
       </article>
-      
+
       <article class="restorants__item">
         <img class="restorants__img" src="images/food/pizza-runcho.png" alt="blaze-pizza" width="370" height="300">
         <h3 class="restorants__name">
@@ -349,7 +354,7 @@
             12:00 - 21:00
           </div>
           <a href="#" class="restorants__link">
-                        <span style="background-image: url('images/sprite.svg#icon-arrow');"></span>
+            <span style="background-image: url('images/sprite.svg#icon-arrow');"></span>
 
           </a>
         </div>
@@ -384,7 +389,7 @@
             <svg class="restorants__time-svg">
               <use xlink:href="images/sprite.svg#icon-time"></use>
             </svg>
-             06:00 - 23:00
+            06:00 - 23:00
           </div>
           <a href="#" class="restorants__link">
             <span style="background-image: url('images/sprite.svg#icon-arrow');"></span>
@@ -444,7 +449,7 @@
           <div class="swiper-wrapper">
 
             <div class="reviews__slide swiper-slide">
-              <img class="reviews__img" src="images/client.jpg" alt="Клиент" width="300" height="300">
+              <img class="reviews__img" src="images/client.jpg" alt="Клиент">
               <div class="reviews__aside">
               </svg>
               <blockquote class="reviews__blockquote">
@@ -590,7 +595,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-top__items footer-top__form">
-        <a class="logo footer-top__logo" href="#">
+        <a class="logo footer-top__logo" href="#header">
           <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
         <form class="footer-top__form" action="#">
@@ -665,7 +670,7 @@
           </a>
         </li>
       </ul>
-      <ul class="footer-top__items">
+      <ul class="footer-top__items footer-top__items-contacts">
         <li class="footer-top__item">
           <a class="footer-top__link" href="#">
             <svg class="footer-top__contact-svg">
@@ -710,7 +715,6 @@
       © 2022 Simple Food
     </p>
   </div>
-
 </footer>
  <script src="js/main.min.js"></script>
  </body>
